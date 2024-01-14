@@ -1,4 +1,65 @@
+/* Add this code inside the <style> tag or your external stylesheet */
+
+.navbar {
+  background-color: transparent; /* Transparent background */
+  box-shadow: none; /* No box shadow for transparency */
+  padding: 10px;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  margin-right: 20px; /* Increased margin for more spacing between buttons */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #555; /* Slightly darker text color */
+  font-family: '', sans-serif; /* Use Century font */
+  font-size: 14px; /* Increased text size */
+  font-weight: bold;
+  position: relative; /* Relative positioning for absolute pseudo-element */
+  padding: 10px 15px; /* Increased padding for better touch/click target */
+  border-radius: 8px; /* Rounder corners */
+  transition: color 0.3s; /* Smooth transition for text color */
+}
+
+.navbar a:hover {
+  color: #000; /* Darker text color on hover */
+}
+
+/* Underline animation on hover */
+.navbar a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Underline height */
+  background-color: #000; /* Black color for the underline */
+  transform: scaleX(0); /* Initially set to invisible */
+  transform-origin: bottom right; /* Animation origin from the bottom right */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for underline */
+}
+
+.navbar a:hover::before {
+  transform: scaleX(1); /* Show the underline on hover */
+  transform-origin: bottom left; /* Animation origin changes to bottom left on hover */
+}
+
+
+
+
 /* latin-ext */
+
+
+
 @font-face {
   font-family: 'Lato';
   font-style: italic;
